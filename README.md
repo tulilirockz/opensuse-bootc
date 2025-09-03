@@ -2,6 +2,8 @@
 
 Experiment to see if Bootc could work on OpenSUSE
 
+<img width="2201" height="1239" alt="image" src="https://github.com/user-attachments/assets/2d906848-ee82-40b1-8c3d-91e83ef7e492" />
+
 ## Building
 
 In order to get a running ubuntu-bootc system you can run the following steps:
