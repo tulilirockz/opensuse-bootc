@@ -50,9 +50,7 @@ RUN zypper install -y \
 
 RUN cp /usr/bin/bootc-initramfs-setup /usr/lib/dracut/modules.d/37composefs
 
-RUN tee /etc/dracut.conf.d/composefs.conf <<EOF
-add_drivers+=" erofs "
-EOF
+RUN echo 'add_drivers+=" erofs "' > /etc/dracut.conf.d/composefs.conf
 
 RUN echo "$(basename "$(find /usr/lib/modules -maxdepth 1 -type d | grep -v -E "*.img" | tail -n 1)")" > kernel_version.txt && \
     dracut --force --add debug --no-hostonly --reproducible --zstd --verbose --kver "$(cat kernel_version.txt)"  "/usr/lib/modules/$(cat kernel_version.txt)/initramfs.img" && \
