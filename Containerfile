@@ -71,7 +71,7 @@ RUN mkdir -p /boot /sysroot /var/home && \
 RUN usermod -p '$6$AJv9RHlhEXO6Gpul$5fvVTZXeM0vC03xckTIjY8rdCofnkKSzvF5vEzXDKAby5p3qaOGTHDypVVxKsCE3CbZz7C3NXnbpITrEUvN/Y/' root
 
 # If you want a desktop :)
-RUN zypper install -y -t pattern kde && zypper install -y konsole sddm-qt6 vim dolphin
+# RUN zypper install -y -t pattern kde && zypper install -y konsole sddm-qt6 vim dolphin
 
 # Necessary labels
 LABEL containers.bootc 1
